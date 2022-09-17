@@ -1,4 +1,3 @@
-/* 共用 */
 * {
     margin: 0;
     font-family: "微軟正黑體", Arial, Helvetica, sans-serif;
@@ -6,10 +5,10 @@
 }
 
 a {
-    text-decoration:none;
+    font-size: .8em;
+    text-decoration: none;
     cursor: pointer;
-    padding: 0 1em;
-    transition: opacity .5s;
+    transition: .5s;
 }
 
 a:hover {
@@ -21,7 +20,11 @@ ol {
     padding-left: 1em;
 }
 
-li, h5, .footer p {
+p {
+    font-size: .8em;
+}
+
+li, h5, .info div {
     text-align: left;
 }
 
@@ -69,7 +72,7 @@ h4, h5, span, .vip_exp .active .price  {
 }
 
 .box:hover, .icon img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: .5s ease-in;
 }
 
@@ -82,7 +85,6 @@ h4, h5, span, .vip_exp .active .price  {
     display: block;
     width: 12em;
     margin: 0 auto;
-    font-size: .8em;
     color: #DAD3C6;
     background-color: #DB2778;
     padding: .5em 0;
@@ -114,11 +116,9 @@ h4, h5, span, .vip_exp .active .price  {
 .header a {
     color: #18191A;
     position: relative;
-    font-size: .8em;
     font-weight: 650;
     padding: 1.5em 1em;
     transform: translateY(0px);
-    transition: .3s;
 }
 
 .header a::after {
@@ -129,8 +129,8 @@ h4, h5, span, .vip_exp .active .price  {
     bottom: -5px;
     height: 0;
     border-bottom: 5px solid#DB2778;
-    transition: .3s;
     transform: translateY(-5px);
+    transition: .3s;
 }
 
 .header a:hover {
@@ -182,14 +182,12 @@ h4, h5, span, .vip_exp .active .price  {
 
 .banner p {
     color: rgba(255,255,255, .5);
-    font-size: .8em;
     margin-bottom: 1em;
 }
 
 .banner a {
     display: inline-block;
     width: 8em;
-    font-size: .8em;
     padding: .4em 1.2em;
     margin-right: .5em;
 }
@@ -226,10 +224,6 @@ h4, h5, span, .vip_exp .active .price  {
     margin-bottom: .5em;
 }
 
-.feature p {
-    font-size: .8em;
-}
-
 .vip_fuc {
     background: linear-gradient(-75deg, #DAD3C6 60%, transparent 40%) center center / 100% 100%,
     url(./image/side.png) left 20% / cover no-repeat;
@@ -246,10 +240,6 @@ h4, h5, span, .vip_exp .active .price  {
 
 .vip_fuc .icon img {
     width: 6em;
-}
-
-.vip_fuc p {
-    font-size: .8em;
 }
 
 .vip_fuc .container > p {
@@ -320,11 +310,7 @@ h4, h5, span, .vip_exp .active .price  {
     margin: 1.2em 0 1em;
 }
 
-.tip ol {
-    font-size: .6em;
-}
-
-.footer {
+.tip ol, .footer {
     font-size: .6em;
 }
 
@@ -336,12 +322,12 @@ h4, h5, span, .vip_exp .active .price  {
     justify-content: space-around;
 }
 
-.footerTop .info {
+.footerTop .info_box {
     color: #18191A;
 }
 
-.footerTop .info_l {
-    padding-right: 1em;
+.footerTop .info:first-child {
+    margin-right: 1em;
 }
 
 .footerBottom,
@@ -349,20 +335,17 @@ h4, h5, span, .vip_exp .active .price  {
     color: #E0D2BF;
 }
 
-.footerBottom a {
-    border-right:  1px solid #E0D2BF;
+.footerBottom a + a::before {
+    content: '|';
+    margin: 0 1em;
+    opacity: .3;
 }
-
-.footerBottom a:last-child {
-    border: 0;
-}
-
 
 .footerBottom .copyright {
-    margin-top: 1em;
+    margin-top: .8em;
 }
 
-.header *, .title, .box_item, .footerTop .container, .footerTop .info, .footerTop .logo {
+.header *, .title, .box_item, .footerTop .container, .footerTop .info_box, .footerTop .logo {
     display: flex;
     align-items: center;
 }
@@ -394,18 +377,14 @@ h4, h5, span, .vip_exp .active .price  {
     .header .logo_icon {
         position: fixed;
         right: 5%;
-        top: 2.5%;
-    }
-
-    .header, .header .svg {
-        padding: 0;
+        top: 1%;
     }
 
     .header .container, .footerTop .container {
         display: block;
     }
 
-    .banner p, .header a:hover::after {
+    .banner p, .header a:hover::after, .footerBottom a + a::before {
         display: none;
     }
 
@@ -421,6 +400,7 @@ h4, h5, span, .vip_exp .active .price  {
 
     .header .svg {
         width: 1.2em;
+        padding: .8em;
     }
 
     .header a {
@@ -430,7 +410,6 @@ h4, h5, span, .vip_exp .active .price  {
     }
 
     .header .button {
-        font-size: .8em;
         padding: 1em 0;
         margin: 0;
     }
@@ -463,13 +442,9 @@ h4, h5, span, .vip_exp .active .price  {
         background-color: #DAD3C6;
     }
 
-    .header, .header a, .feature .box_item, .vip_exp .box_item, .footerTop, .footerTop .info, .footerBottom, .footerBottom a {
+    .header, .header a, .feature .box_item, .vip_exp .box_item, .footerTop, .footerTop .info_box, .footerBottom, .footerBottom a {
         display: flex;
         flex-direction: column;
-    }
-
-    .footer {
-        font-size: .6em;
     }
     
     .footerTop .logo {
@@ -477,23 +452,18 @@ h4, h5, span, .vip_exp .active .price  {
         margin-bottom: .5em;
     }
 
-    .footerTop .info {
+    .footerTop .info_box {
         font-size: 1.2em;
         line-height: 1.5em;
         padding: 0 3.5em;
         align-items: flex-start;
     }
 
-    .footerTop .info_l {
-        padding-right: 0;
-    }
-
-    .footerBottom {
-        font-size: 1.2em;
+    .footerTop .info:first-child {
+        margin-right: 0;
     }
 
     .footerBottom a {
-        padding: .5em 0;
-        bottom: 0;
+        padding: .8em 0;
     }
 }
