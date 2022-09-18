@@ -65,6 +65,7 @@ h4, h5, span, .vip_exp .active .price  {
     width: 12em;
     flex-direction: column;
     margin-right: 1em;
+    box-shadow: 0 0 12px 5px rgba(145, 105, 30, 0.2);
 }
 
 .box:last-child {
@@ -73,7 +74,7 @@ h4, h5, span, .vip_exp .active .price  {
 
 .box:hover, .icon img:hover {
     transform: scale(1.05);
-    transition: .5s ease-in;
+    transition: .3s ease-in;
 }
 
 .icon {
@@ -85,7 +86,7 @@ h4, h5, span, .vip_exp .active .price  {
     display: block;
     width: 12em;
     margin: 0 auto;
-    color: #DAD3C6;
+    color: #dbd4c7;
     background-color: #DB2778;
     padding: .5em 0;
 }
@@ -359,10 +360,6 @@ h4, h5, span, .vip_exp .active .price  {
     .box, .button a {
         margin-right: 0;
         margin-bottom: 1em;
-    }
-
-    .box:hover, .icon img:hover {
-        transform: scale(1);
     }
 
     .container, .more {
